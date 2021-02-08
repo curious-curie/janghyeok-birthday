@@ -53,7 +53,7 @@ const LandingPage = () => {
       >
         <div style={{ fontSize: '32px', margin: '16px 0'}}>장혁이를 도와주세요.</div>
         <div style={{ fontSize: '24px', color: '#000', margin: '4px 0'}}>내가 가진 것을 나누어 아동의 일상이 변화되는 순간, 내 삶도 반짝입니다.</div>
-        <div style={{ fontSize: '24px', color: '#000'}}>2월 11일 아동의 생일, 후원으로 마음을 전달해주세요.</div>
+        <div style={{ fontSize: '24px', color: '#000'}}>2월 11일 우리 장혁 어린이 생일, 후원으로 마음을 전달해주세요.</div>
       </Heading>
 
       <Heading
