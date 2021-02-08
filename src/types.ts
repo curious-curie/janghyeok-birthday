@@ -17,7 +17,7 @@ export type Project = {
   type?: string;
   publishedDate?: string;
   logo?: Image;
-  index?: number | undefined | null;
+  index?: number | undefined;
 };
 
 export type AboutMe = {
