@@ -9,14 +9,17 @@ import { Card } from './Card';
 
 type Props = ProjectType;
 
+const getImgSrc = (index) => {
+  if(+index === 1) return 'https://user-images.githubusercontent.com/47528556/107217544-a8b10200-6a51-11eb-95a8-24b51c8c47b1.png'
+  if(+index === 2) return 'https://user-images.githubusercontent.com/47528556/107217632-c8e0c100-6a51-11eb-8909-32566ce70b0b.png'
+  return 'https://user-images.githubusercontent.com/47528556/107217786-080f1200-6a52-11eb-93a4-dc65a2496cf0.png'
+}
+
 const Project = ({
   name,
   description,
-  homepage,
-  repository,
-  type,
-  publishedDate,
   logo,
+  index,
 }: Props) => (
   <Card p={0}>
     <Flex style={{ height: CARD_HEIGHT }}>
@@ -26,34 +29,26 @@ const Project = ({
             {name}
           </Title>
         </span>
-        <Text width={[1]} style={{ overflow: 'auto' }} color="text">
+        <Text width={[1]} style={{ overflow: 'auto', fontSize: '1.2em' }} color="text">
           {description}
         </Text>
       </TextContainer>
 
       <ImageContainer>
-        <ProjectImage {...logo} />
-        <ProjectTag>
+        <ProjectImage src={getImgSrc(index)} />
+        {/* <ProjectTag>
           <Flex
             m={1}
             style={{
               float: 'right',
             }}
           >
-            <Box mx={1} fontSize={4}>
-              <SocialLink name="Repository" icon="github" url={repository} />
-            </Box>
-            <Box mx={1} fontSize={4}>
-              <SocialLink name="Homepage" icon="globe" url={homepage} />
-            </Box>
           </Flex>
           <ImageLabel bg="primary" color="white" position="bottom-right" round>
             {type}
           </ImageLabel>
-          <Hide query="md">
-            <ImageLabel bg="muted">{publishedDate}</ImageLabel>
-          </Hide>
-        </ProjectTag>
+
+        </ProjectTag> */}
       </ImageContainer>
     </Flex>
   </Card>

@@ -15,24 +15,12 @@ const Footer = () => {
       <FooterContainer>
         <Fade direction="left" triggerOnce>
           <TextWrapper fontSize={[2, 3]}>
-            <span>{`${name} Portfolio - Powered by `}</span>
-            <Link href={GATSBY_URL}>Gatsby</Link>
-            <span>, </span>
-            <Link href={CONTENTFUL_URL}>Contentful</Link>
-            <span> and </span>
-            <Link href={NETLIFY_URL}>Netlify</Link>{' '}
-            <span role="img" aria-label="heart">
-              ❤️
-            </span>
+            <span>{`생일 축하해 우리 장혁 ㅋㅋㅋㅋㅋㅋㅋ 2021년은 장혁의 해 🌞`}</span>
           </TextWrapper>
         </Fade>
         <Flex>
           <Fade direction="right" triggerOnce cascade damping={0.5}>
-            {socialLinks.map((sl) => (
-              <Box mx={[2, 3]} fontSize={[4, 5]} key={sl.name}>
-                <SocialLink {...sl} invert />
-              </Box>
-            ))}
+
           </Fade>
         </Flex>
       </FooterContainer>

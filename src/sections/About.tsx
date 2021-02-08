@@ -8,12 +8,23 @@ import Triangle from '../components/Triangle';
 import markdownRenderer from '../components/MarkdownRenderer';
 import { useAboutMeQuery } from '../queries/useAboutMeQuery';
 
+const markdown = `
+
+### 장혁이가 꿈을 펼쳐 가는 소중한 기회가 됩니다.
+개발자를 꿈꾸는 장혁이가 중고 컴퓨터를 살 수 있도록 도와주세요.
+### 마음껏 공부할 수 있는 환경이 됩니다.
+피치 못한 사정으로 비극적인 재수강을 해야하는 장혁이를 도와주세요.
+### 문제를 해결하는 지원금이 됩니다.
+장혁이가 친구들에게 놀림받아 우는 일이 없도록 도와주세요.
+
+`
 const About = () => {
-  const { markdown, profile } = useAboutMeQuery();
+  const { profile } = useAboutMeQuery();
 
   return (
     <Section.Container id="about" Background={Background}>
-      <Section.Header name="About me" icon="🙋‍♂️" label="person" />
+      
+      <Section.Header name="여러분의 후원금은 든든한 울타리가 됩니다." icon="" label="person" />
       <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
         <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]} mt={2}>
           <Fade direction="down" triggerOnce>

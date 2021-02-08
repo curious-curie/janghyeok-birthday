@@ -11,8 +11,33 @@ import { useSiteQuery } from '../queries/useSiteQuery';
 const centerHorizontally = { marginRight: 'auto', marginLeft: 'auto' };
 
 const LandingPage = () => {
-  const { name, roles, socialLinks, deterministic } = useSiteQuery();
+  const { name, socialLinks, deterministic } = useSiteQuery();
   const aboutSection = useScrollSection('about');
+
+  const copyText = () => {
+    const textArea = document.createElement("textarea");
+    textArea.value = '3021162813611';
+    
+    // Avoid scrolling to bottom
+    textArea.style.top = "0";
+    textArea.style.left = "0";
+    textArea.style.position = "fixed";
+    textArea.style.display = 'none';
+
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+      const successful = document.execCommand('copy');
+    } catch(e) {
+      console.log(e)
+    }
+  }
+  const roles = [
+    '장혁이의 외로운 생일😢', '후원으로 도와주세요!',
+    '행복한 생일을 만들어 주세요🎂', '작은 금액도 큰 힘입니다.'
+  ]
 
   return (
     <Section.Container id="home" Background={Background}>
@@ -23,7 +48,9 @@ const LandingPage = () => {
         fontSize={[6, 7]}
         mb={[3, 4, 5]}
       >
-        {`Hello, I'm ${name}!`}
+        <div>장혁이를 도와주세요.</div>
+        <div style={{ fontSize: '24px'}}>내가 가진 것을 나누어 아동의 일상이 변화되는 순간, 내 삶도 반짝입니다.</div>
+        <div style={{ fontSize: '24px'}}>2월 11일 아동의 생일, 후원으로 마음을 전달해주세요.</div>
       </Heading>
 
       <Heading
@@ -34,9 +61,8 @@ const LandingPage = () => {
         textAlign="center"
         style={centerHorizontally}
       >
-        <TextLoop interval={5000}>
+        <TextLoop interval={2000}>
           {roles
-            .sort(() => (deterministic ? 1 : Math.random() - 0.5))
             .map((text) => (
               <Text width={[300, 500]} key={text}>
                 {text}
@@ -46,11 +72,10 @@ const LandingPage = () => {
       </Heading>
 
       <Flex alignItems="center" justifyContent="center" flexWrap="wrap">
-        {socialLinks.map((sl) => (
-          <Box mx={3} fontSize={[5, 6, 6]} key={sl.name}>
-            <SocialLink {...sl} />
-          </Box>
-        ))}
+        <div style={{background: '#7c37ad', borderRadius: '8px', padding: '16px', fontSize: '56px', color: '#fff'}}>3021162813611 농협</div>
+      </Flex>
+      <Flex alignItems="center" justifyContent="center" flexWrap="wrap" onClick={copyText}>
+        <div style={{ cursor: 'pointer', margin: '16px', fontSize: '20px'}}>복사하기</div>
       </Flex>
 
       <MouseIcon onClick={aboutSection.onClick} />

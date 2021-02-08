@@ -9,17 +9,7 @@ import { Post } from '../components/Post';
 const Writing = () => {
   const { posts } = useMediumQuery();
 
-  return (
-    <Section.Container id="writing" Background={Background}>
-      <Section.Header name="Writing" icon="✍️" label="writing" />
-      <CardContainer minWidth="300px">
-        <Fade direction="down" triggerOnce cascade damping={0.5}>
-          {posts.map((p) => (
-            <Post {...p} key={p.url} />
-          ))}
-        </Fade>
-      </CardContainer>
-    </Section.Container>
+  return ( null
   );
 };
 

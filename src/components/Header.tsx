@@ -20,15 +20,7 @@ const Header = () => {
       >
         <HomeLink />
         <Flex mr={[0, 3, 5]}>
-          {sections
-            .filter(({ id }) => id !== 'home')
-            .map(({ id, onClick, selected }) => (
-              <Box key={id} ml={[2, 3]} color="background" fontSize={[2, 3]}>
-                <Link onClick={onClick} selected={selected} tabIndex={0}>
-                  {capitalize(id)}
-                </Link>
-              </Box>
-            ))}
+          <div style={{ color: '#fff', fontSize: '24px'}}>유규리 아동 후원 재단</div>
         </Flex>
       </Flex>
     </StyledHeadroom>

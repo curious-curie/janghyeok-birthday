@@ -12,13 +12,13 @@ const plugins = [
   {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      name: `${about.name} Portfolio`,
-      short_name: about.name,
+      name: `Help JH`,
+      short_name:`Help JH`,
       start_url: '/',
       background_color: about.colors.background,
       theme_color: about.colors.primary,
       display: 'minimal-ui',
-      icon: 'media/icon.png',
+      icon: 'media/1.jpeg',
     },
   },
   'gatsby-plugin-offline',
