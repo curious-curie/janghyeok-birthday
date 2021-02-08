@@ -16,6 +16,7 @@ const Footer = () => {
         <Fade direction="left" triggerOnce>
           <TextWrapper fontSize={[2, 3]}>
             <span>{`생일 축하해 우리 장혁 ㅋㅋㅋㅋㅋㅋㅋ 2021년은 장혁의 해 🌞`}</span>
+
           </TextWrapper>
         </Fade>
         <Flex>
