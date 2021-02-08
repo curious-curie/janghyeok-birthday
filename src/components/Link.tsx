@@ -16,6 +16,7 @@ const Link = styled.a<Props>`
   ${({ selected, theme }) =>
     selected && `border-bottom:  5px solid ${theme.colors.primary}`};
   transition: 0.4s;
+  line-height: 2;
   cursor: ${({ onClick, href }) => (onClick || href ? 'pointer' : 'default')};
 
   &:after {

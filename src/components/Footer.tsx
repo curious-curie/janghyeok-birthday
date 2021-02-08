@@ -8,7 +8,7 @@ import { useSiteQuery } from '../queries/useSiteQuery';
 import { CONTENTFUL_URL, GATSBY_URL, NETLIFY_URL } from '../utils/constants';
 
 const Footer = () => {
-  const { name, socialLinks } = useSiteQuery();
+  // const { name, socialLinks } = useSiteQuery();
 
   return (
     <Box p={[2, 3]} backgroundColor="primary" id="footer">

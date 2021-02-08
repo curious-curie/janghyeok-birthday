@@ -170,7 +170,7 @@ module.exports = {
   primaryLight: '#ae66df',
   primaryDark: '#4b007d',
 
-  secondary: '#ff4081',
+  secondary: '#ff79b0',
   secondaryLight: '#ff79b0',
   secondaryDark: '#c60055',
 };

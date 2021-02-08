@@ -17,7 +17,7 @@ const theme: Theme = {
     text: '#333333',
 
     primary: '#7c37ad',
-    secondary: '#ff4081',
+    secondary: '#ff79b0',
     highlight: '#ff79b0',
   },
   queries: {

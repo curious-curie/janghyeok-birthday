@@ -14,25 +14,6 @@ type QueryResponse = {
   };
 };
 
-export const useSiteQuery = (): Landing & { deterministic: boolean } => {
-  const { contentfulAbout, site } = useStaticQuery<QueryResponse>(graphql`
-    query SiteQuery {
-      contentfulAbout {
-        name
-        roles
-        socialLinks {
-          url
-          name
-          icon: fontAwesomeIcon
-        }
-      }
-      site {
-        siteMetadata {
-          deterministic
-        }
-      }
-    }
-  `);
-
-  return { ...contentfulAbout, ...site.siteMetadata };
+export const useSiteQuery = (): any => {
+  return null;
 };

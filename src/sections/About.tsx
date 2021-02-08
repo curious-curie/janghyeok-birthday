@@ -7,6 +7,7 @@ import Section from '../components/Section';
 import Triangle from '../components/Triangle';
 import markdownRenderer from '../components/MarkdownRenderer';
 import { useAboutMeQuery } from '../queries/useAboutMeQuery';
+import { getImgSrc } from '../components/Header';
 
 const markdown = `
 
@@ -19,7 +20,7 @@ const markdown = `
 
 `
 const About = () => {
-  const { profile } = useAboutMeQuery();
+  // const { profile } = useAboutMeQuery();
 
   return (
     <Section.Container id="about" Background={Background}>
@@ -37,7 +38,7 @@ const About = () => {
           style={{ maxWidth: '300px', margin: 'auto' }}
         >
           <Fade direction="right" triggerOnce>
-            <ProfilePicture mt={[4, 4, 0]} ml={[0, 0, 1]} {...profile} />
+            <ProfilePicture mt={[4, 4, 0]} ml={[0, 0, 1]} src={getImgSrc(1)} />
           </Fade>
         </Box>
       </Flex>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet as ReactHelmet } from 'react-helmet';
 import { DefaultTheme, withTheme } from 'styled-components';
 import { useHelmetQuery } from '../queries/useHelmetQuery';
+import { getImgSrc } from './Header';
 
 type Props = {
   theme: DefaultTheme;
@@ -9,7 +10,7 @@ type Props = {
 
 const Helmet = ({ theme }: Props) => {
   const { name, description, profile } = useHelmetQuery();
-  const title = `${name} Portfolio`;
+  const title = '헬프 장혁'
 
   console.log(`https:${profile.bigIcon.src}`);
 
@@ -18,9 +19,9 @@ const Helmet = ({ theme }: Props) => {
       <meta charSet="utf-8" />
       <title>{title}</title>
       <meta name="description" content={description} />
-      <link rel="shortcut icon" href={`https:${profile.favicon32.src}`} />
+      <link rel="shortcut icon" href={getImgSrc(2)} />
       <meta name="theme-color" content={theme.colors.background} />
-      <meta name="image" content={`https:${profile.favicon32.src}`} />
+      <meta name="image" content={getImgSrc(1)}/>
       <meta itemProp="name" content={title} />
       <meta itemProp="description" content={description} />
       <meta itemProp="image" content={`https:${profile.favicon32.src}`} />
