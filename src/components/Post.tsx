@@ -9,8 +9,8 @@ import ImageLabel from './ImageLabel';
 
 type PostProps = MediumPostType;
 
-export const Post = ({ title, text, cover, url, date, time }: PostProps) => (
-  <PostContainer url={url} title={title}>
+export const Post = ({ title, text, cover, url, date, time }: any) => (
+  <PostContainer url="test" title="title">
     <EllipsisHeading m={3} color="text">
       {title}
     </EllipsisHeading>

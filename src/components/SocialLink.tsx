@@ -12,30 +12,7 @@ type Props = SocialLinkType & {
 };
 
 const SocialLink = ({ icon, name, url, invert }: Props) => {
-  const iconDefinition = getIconDefinition(icon);
-  if (!iconDefinition) {
-    console.warn(`The icon "${icon}" was not properly loaded ...`);
-    return null;
-  }
-
-  return (
-    <Tippy
-      content={name}
-      placement="bottom"
-      trigger="mouseenter focus"
-      arrow={false}
-    >
-      <IconLink
-        href={url}
-        target="_blank"
-        invert={invert}
-        rel="noreferrer"
-        aria-label={name}
-      >
-        <FontAwesomeIcon icon={iconDefinition} title={name} />
-      </IconLink>
-    </Tippy>
-  );
+  return null;
 };
 
 const IconLink = styled(Link)<{ invert?: boolean }>`
