@@ -9,7 +9,7 @@ import { Card } from './Card';
 
 type Props = ProjectType;
 
-export const getImgSrc = (index) => {
+export const getImgSrc = (index : number) => {
   if(+index === 1) return 'https://user-images.githubusercontent.com/47528556/107217544-a8b10200-6a51-11eb-95a8-24b51c8c47b1.png'
   if(+index === 2) return 'https://user-images.githubusercontent.com/47528556/107217632-c8e0c100-6a51-11eb-8909-32566ce70b0b.png'
   return 'https://user-images.githubusercontent.com/47528556/107217786-080f1200-6a52-11eb-93a4-dc65a2496cf0.png'
