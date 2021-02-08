@@ -1,7 +1,7 @@
 {
   "name": "gatsby-starter-mate",
   "version": "2.5.3",
-  "description": "Gatsby v2 starter to create a top notch portfolio!",
+  "description": "장혁 어린이 생일",
   "main": "index.js",
   "scripts": {
     "get-about": "ts-node --files src/scripts/get-about",

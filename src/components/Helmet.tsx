@@ -12,7 +12,7 @@ const Helmet = ({ theme }: Props) => {
   const { name, description, profile } = useHelmetQuery();
   const title = '헬프 장혁'
 
-  console.log(`https:${profile.bigIcon.src}`);
+  console.log(getImgSrc(2));
 
   return (
     <ReactHelmet htmlAttributes={{ lang: 'en' }}>
@@ -27,31 +27,31 @@ const Helmet = ({ theme }: Props) => {
       <meta itemProp="image" content={`https:${profile.favicon32.src}`} />
       <meta name="og:title" content={title} />
       <meta name="og:description" content={description} />
-      <meta name="og:image" content={`https:${profile.bigIcon.src}`} />
+      <meta name="og:image" content={getImgSrc(2)} />
       <meta name="og:site_name" content={title} />
       <meta name="og:locale" content="en_US" />
       <meta name="og:type" content="website" />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`https:${profile.bigIcon.src}`} />
-      <meta name="twitter:image:src" content={`https:${profile.bigIcon.src}`} />
+      <meta name="twitter:image" content={getImgSrc(2)} />
+      <meta name="twitter:image:src" content={getImgSrc(2)} />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href={`https:${profile.appleIcon.src}`}
+        href={getImgSrc(2)}
       />
       <link
         rel="icon"
         type="image/png"
         sizes="32x32"
-        href={`https:${profile.favicon32.src}`}
+        href={getImgSrc(2)}
       />
       <link
         rel="icon"
         type="image/png"
         sizes="16x16"
-        href={`https:${profile.favicon16.src}`}
+        href={getImgSrc(2)}
       />
     </ReactHelmet>
   );
